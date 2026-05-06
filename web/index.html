@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tic-Tac-Toe RL</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main class="app">
+      <section class="play-area" aria-label="tic-tac-toe board">
+        <div class="topbar">
+          <div>
+            <h1>Tic-Tac-Toe RL</h1>
+            <p id="modelInfo">모델을 불러오는 중...</p>
+          </div>
+          <div class="score" aria-label="score">
+            <span>사람 <strong id="humanScore">0</strong></span>
+            <span>무승부 <strong id="drawScore">0</strong></span>
+            <span>모델 <strong id="agentScore">0</strong></span>
+          </div>
+        </div>
+
+        <div id="board" class="board" aria-label="board"></div>
+
+        <div class="controls">
+          <label>
+            내 차례
+            <select id="sideSelect">
+              <option value="X">X 먼저 두기</option>
+              <option value="O">O 나중에 두기</option>
+            </select>
+          </label>
+          <label>
+            모델 수
+            <select id="modeSelect">
+              <option value="greedy">가장 강한 수</option>
+              <option value="sample">정책 샘플링</option>
+            </select>
+          </label>
+          <button id="resetButton" type="button">새 게임</button>
+        </div>
+
+        <p id="status" class="status" role="status"></p>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
+
